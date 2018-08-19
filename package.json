@@ -1,0 +1,81 @@
+{
+  "name": "@nuxtjs/opencollective",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Alexander Lichter <npm@lichter.io>"
+    }
+  ],
+  "main": "./src/cjs.js",
+  "module": "./src/index.js",
+  "bin": "./src/cjs.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxt-community/opencollective"
+  },
+  "bugs": {
+    "url": "https://github.com/nuxt-community/opencollective/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "nuxt test/fixture",
+    "lint": "eslint src test",
+    "test": "npm run lint && npm run test:coverage",
+    "test:ava": "nyc ava --verbose",
+    "test:coverage": "nyc --reporter=lcov --reporter=html ava",
+    "prepublish": "npm run build",
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "commitlint": "commitlint -e $GIT_PARAMS",
+    "coverage": "codecov"
+  },
+  "files": [
+    "src",
+    "dst"
+  ],
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "consola": "^1.4.3",
+    "esm": "^3.0.79",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "ava": "^1.0.0-beta.7",
+    "codecov": "^3.0.4",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-ava": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.21.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "fetch-mock": "^6.5.2",
+    "husky": "^1.0.0-rc.13",
+    "jsdom": "^12.0.0",
+    "nyc": "^12.0.2",
+    "sinon": "^6.1.5",
+    "standard-version": "^4.4.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "npm run commitlint"
+    }
+  }
+}

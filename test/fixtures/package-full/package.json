@@ -1,0 +1,27 @@
+{
+  "name": "package-with-postinstall",
+  "version": "1.0.0",
+  "description": "Show it!",
+  "repository": {
+    "url": "https://github.com/opencollective/opencollective-postinstall"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "opencollective",
+    "postinstall": "opencollective"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@nuxtjs/opencollective": "../../../"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/fake",
+    "logoUrl": "https://opencollective.com/fake/logo.txt?reverse=true&variant=variant2",
+    "donation": {
+      "slug": "/order/591",
+      "amount": "50"
+    }
+  }
+}
