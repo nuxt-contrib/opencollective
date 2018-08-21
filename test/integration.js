@@ -41,13 +41,10 @@ test.serial('it runs the postinstall script after npm install', async t => {
 // eslint-disable-next-line handle-callback-err
   const { stdout: rawStdout } = await promisify(exec)('npm install', {
     cwd: pkgPaths.full,
-    env: Object.assign(process.env, {
-      NODE_ENV: 'dev',
-      CI: undefined,
-      CONTINUOUS_INTEGRATION: undefined,
-      OPENCOLLECTIVE_HIDE: undefined,
-      OC_POSTINSTALL_TEST: undefined
-    })
+    env: {
+      PATH: process.env.PATH,
+      PWD: process.env.PWD
+    }
   })
   const stdout = rawStdout.toString('utf8').split('\n').slice(9, 13).join('\n')
   t.snapshot(stdout)
