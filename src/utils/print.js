@@ -23,9 +23,13 @@ const retrieveCols = (() => {
     if (result) {
       return result
     }
-
-    const terminalCols = execSync(`tput cols`, { stdio: ['pipe', 'pipe', 'ignore'] })
-    result = parseInt(terminalCols.toString()) || 80
+    const defaultCols = 80
+    try {
+      const terminalCols = execSync(`tput cols`, { stdio: ['pipe', 'pipe', 'ignore'] })
+      result = parseInt(terminalCols.toString()) || defaultCols
+    } catch (e) {
+      result = defaultCols
+    }
     return result
   }
 })()
