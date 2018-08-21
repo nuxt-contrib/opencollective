@@ -6,9 +6,9 @@ import { promisify } from 'util'
 import { init } from '../src/init'
 import fetch from 'node-fetch'
 
-test.beforeEach(t => {
-  t.context.logo = 'You are beautiful!'
-  t.context.stats = {
+test.serial('it prints everything', async t => {
+  const logo = 'You are beautiful!'
+  const stats = {
     'slug': 'nuxtjs',
     'currency': 'USD',
     'image': 'https://opencollective-production.s3-us-west-1.amazonaws.com/251e1a10-369b-11e7-8ad6-5967d7493bb7.png',
@@ -20,18 +20,12 @@ test.beforeEach(t => {
 
   // Assign as the assignment in init happens after mocking
   global.fetch = fetch
-  fetchMock.mock('https://opencollective.com/fake.json', t.context.stats)
+  fetchMock.mock('https://opencollective.com/fake.json', stats)
   fetchMock.mock('https://opencollective.com/fake/logo.txt?reverse=true&variant=variant2', {
-    body: t.context.logo,
+    body: logo,
     headers: { 'content-type': 'text/plain' }
   })
-})
 
-test.afterEach(t => {
-  fetchMock.restore()
-})
-
-test.serial('it prints everything', async t => {
   let log = ''
   process.stdout.write = (write => function (string, encoding, fileDescriptor) {
     log += string

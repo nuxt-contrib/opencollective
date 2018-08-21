@@ -5,7 +5,7 @@ import chalk from 'chalk'
 import { formatMoney, isWin32 } from './misc'
 
 export const print = (color = null) => (str = '') => {
-  const terminalCols = isWin32 ? 80 : parseInt(execSync(`tput cols`).toString())
+  const terminalCols = retrieveCols
   const strLength = str.replace(/\u001b\[[0-9]{2}m/g, '').length
   const leftPaddingLength = Math.floor((terminalCols - strLength) / 2)
   const leftPadding = ' '.repeat(Math.max(leftPaddingLength, 0))
@@ -14,6 +14,15 @@ export const print = (color = null) => (str = '') => {
   }
 
   console.log(leftPadding, str)
+}
+
+const retrieveCols = () => {
+  try {
+    const terminalCols = execSync(`tput cols`)
+    return parseInt(terminalCols.toString())
+  } catch (e) {
+    return 80
+  }
 }
 
 export const printStats = (stats, color) => {
