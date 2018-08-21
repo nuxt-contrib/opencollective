@@ -54,7 +54,8 @@ test.serial('it runs the postinstall script after npm install', async t => {
     cwd: pkgPaths.full,
     env: {
       PATH: process.env.PATH,
-      PWD: process.env.PWD
+      PWD: process.env.PWD,
+      NODE_ENV: 'dev'
     }
   })
   const stdout = rawStdout.toString('utf8').split('\n').slice(9, 13).join('\n')
