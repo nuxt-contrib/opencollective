@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    working_directory: /usr/src/app
+    environment:
+      OPENCOLLECTIVE_FORCE: true
+    docker:
+      - image: banian/node
+    steps:
+      # Checkout repository
+      - checkout
+
+      # Restore cache
+      - restore_cache:
+          key: npm-{{ checksum "package-lock.json" }}
+
+      # Install dependencies
+      - run:
+          name: Install Dependencies
+          command: NODE_ENV=dev npm i
+
+      # Keep cache
+      - save_cache:
+          key: npm-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+      # Test
+      - run:
+          name: Tests
+          command: npm t
+
+      # Coverage
+      - run:
+          name: Coverage
+          command: npm run coverage
