@@ -16,14 +16,19 @@ export const print = (color = null) => (str = '') => {
   console.log(leftPadding, str)
 }
 
-const retrieveCols = () => {
-  try {
-    const terminalCols = execSync(`tput cols`)
-    return parseInt(terminalCols.toString())
-  } catch (e) {
-    return 80
+const retrieveCols = (() => {
+  let result = false
+
+  return () => {
+    if (result) {
+      return result
+    }
+
+    const terminalCols = execSync(`tput cols`, { stdio: ['pipe', 'pipe', 'ignore'] })
+    result = parseInt(terminalCols.toString()) || 80
+    return result
   }
-}
+})()
 
 export const printStats = (stats, color) => {
   if (!stats) {
