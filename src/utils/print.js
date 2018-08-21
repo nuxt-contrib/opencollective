@@ -5,7 +5,7 @@ import chalk from 'chalk'
 import { formatMoney, isWin32 } from './misc'
 
 export const print = (color = null) => (str = '') => {
-  const terminalCols = retrieveCols
+  const terminalCols = retrieveCols()
   const strLength = str.replace(/\u001b\[[0-9]{2}m/g, '').length
   const leftPaddingLength = Math.floor((terminalCols - strLength) / 2)
   const leftPadding = ' '.repeat(Math.max(leftPaddingLength, 0))
