@@ -17,8 +17,8 @@ tHideMessage.title = (providedTitle, input, expected) => {
 }
 
 test(tHideMessage, {}, false)
-test(tHideMessage, false, true)
 test(tHideMessage, { OC_POSTINSTALL_TEST: true }, true)
+test(tHideMessage, { OPENCOLLECTIVE_FORCE: true }, false)
 test(tHideMessage, { OPENCOLLECTIVE_HIDE: true }, true)
 test(tHideMessage, { CI: true }, true)
 test(tHideMessage, { CONTINUOUS_INTEGRATION: true }, true)

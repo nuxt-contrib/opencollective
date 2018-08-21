@@ -4,12 +4,9 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
-    browser: true,
-    node: true,
-    jest: true
+    node: true
   },
   plugins: [
-    'jest',
     'vue',
     'ava'
   ],
@@ -23,9 +20,5 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // Do not allow console.logs etc...
     'no-console': 2
-  },
-  globals: {
-    'jest/globals': true,
-    jasmine: true
   }
 }

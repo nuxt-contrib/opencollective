@@ -7,8 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "opencollective",
-    "postinstall": "opencollective"
+    "postinstall": "OPENCOLLECTIVE_FORCE=true opencollective"
   },
   "author": "",
   "license": "MIT",

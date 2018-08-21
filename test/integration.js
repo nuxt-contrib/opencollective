@@ -49,18 +49,10 @@ test.serial('it prints everything', async t => {
 })
 
 test.serial('it runs the postinstall script after npm install', async t => {
-// eslint-disable-next-line handle-callback-err
-  const { stdout: rawStdout } = await promisify(exec)('npm install', {
-    cwd: pkgPaths.full,
-    env: {
-      PATH: process.env.PATH,
-      PWD: process.env.PWD,
-      NODE_ENV: 'dev'
-    }
-  })
-  const stdout = rawStdout.toString('utf8').split('\n').slice(9, 13).join('\n')
+  const { stdout: rawStdout } = await promisify(exec)('npm i && OPENCOLLECTIVE_FORCE=true npm run postinstall', { cwd: pkgPaths.full })
+  const stdout = rawStdout.toString('utf8')
 
-  t.true(stdout.includes('Thanks for installing fake 🙏'))
+  t.true(stdout.includes('Thanks for installing fake'))
   t.true(stdout.includes('Please consider donating to our open collective'))
   t.true(stdout.includes('to help us maintain this package.'))
 })

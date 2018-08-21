@@ -10,6 +10,11 @@ export const report = msg => {
 }
 
 export const hideMessage = (env = process.env) => {
+  // Show message if it is forced
+  if (env.OPENCOLLECTIVE_FORCE) {
+    return false
+  }
+
   // Don't show after oracle postinstall
   if (env.OC_POSTINSTALL_TEST) {
     return true
