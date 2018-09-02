@@ -75,6 +75,6 @@ export function printFooter (collective) {
   emptyLine()
   printStats(collective.stats)
   emptyLine()
-  print(`${chalk.bold(`${emoji('👉 ')} ${collective.donationText}`)} ${chalk.underline(collective.donationUrl)}`)
+  print()(`${chalk.bold(`${emoji('👉 ')} ${collective.donationText}`)} ${chalk.underline(collective.donationUrl)}`)
   emptyLine()
 }
