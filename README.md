@@ -81,17 +81,17 @@ production or running a CI pipeline. That's why the message is
 
 **Enabled** when one the following environment variables is set:
 
-* NODE_ENV=dev
-* NODE_ENV=development
-* OPENCOLLECTIVE_FORCE
+* `NODE_ENV=dev`
+* `NODE_ENV=development`
+* `OPENCOLLECTIVE_FORCE`
 
 **Strictly Disabled** when one the following environment variables is set:
 
-- OC_POSTINSTALL_TEST
-- OPENCOLLECTIVE_HIDE
-- CI
-- CONTINUOUS_INTEGRATION
-- NODE_ENV (set and **not** `dev` or `development`)
+- `OC_POSTINSTALL_TEST`
+- `OPENCOLLECTIVE_HIDE`
+- `CI`
+- `CONTINUOUS_INTEGRATION`
+- `NODE_ENV` (set and **not** `dev` or `development`)
 
 ## Development
 
