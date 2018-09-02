@@ -21,7 +21,7 @@ features, we decided to spin off our one own. Our key goals are:
 * No interference/problems when installing packages. Never break installation because of the package
 * Pretty output for all information
 * Decent configurability
-
+* Seamless drop-in for [common](https://github.com/opencollective/opencollective-cli) [solutions](https://github.com/opencollective/opencollective-postinstall)
 
 ## Setup
 
@@ -66,7 +66,7 @@ A full configuration looks like:
 
 | Attribute | Optional | Default | Comment |
 | ---    |   ---   | ---   | --- |
-| url | x  | - | The URL to your opencollective page
+| url | ❌  | - | The URL to your opencollective page
 | logo | ✅  | - | **LEGACY**: The URL to the logo that should be displayed. Please use `logoUrl` instead.
 | logoUrl | ✅  | - | The URL to the ASCII-logo that should be displayed.
 | donation.slug | ✅  | '/donate' | The slug that should be appended to `url`. Can be used to setup a specific order.
