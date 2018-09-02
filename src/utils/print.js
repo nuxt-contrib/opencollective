@@ -16,7 +16,7 @@ export const print = (color = null) => (str = '') => {
   console.log(leftPadding, str)
 }
 
-const retrieveCols = (() => {
+export const retrieveCols = (() => {
   let result = false
 
   return () => {
