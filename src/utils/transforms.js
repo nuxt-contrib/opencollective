@@ -13,7 +13,8 @@ export const collectiveUrl = pkg => {
   return stripTrailingSlash(url)
 }
 
-export const collectiveLogoUrl = pkg => pkg.collective.logoUrl || false
+// use pkg.collective.logo for "legacy"/compatibility reasons
+export const collectiveLogoUrl = pkg => pkg.collective.logo || pkg.collective.logoUrl || false
 
 export const collectiveDonationText = pkg => (pkg.collective.donation && pkg.collective.donation.text) || 'Donate:'
 
@@ -27,8 +28,7 @@ export const getCollective = async pkgPath => {
     donationUrl: collectiveDonationUrl(pkg),
     donationText: collectiveDonationText(pkg)
   }
-  // use baseCollective.logo for "legacy" reasons
-  const logoUrl = baseCollective.logoUrl || baseCollective.logo
+  const logoUrl = baseCollective.logoUrl
   const promises = [fetchStats(url)].concat(logoUrl ? fetchLogo(logoUrl) : [])
 
   const [stats, logo] = await Promise.all(promises)
