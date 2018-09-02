@@ -7,6 +7,7 @@ import { init } from '../src/init'
 import fetch from 'node-fetch'
 import { formatMoney } from '../src/utils/misc'
 import pkgJsonFull from './fixtures/package-full/package'
+import { retrieveCols } from '../src/utils/print'
 
 test.serial('it prints everything', async t => {
   const logo = 'You are beautiful!'
@@ -24,6 +25,9 @@ test.serial('it prints everything', async t => {
 
   const pkgCollective = pkgJsonFull.collective
   const url = pkgCollective.url + pkgCollective.donation.slug + '/' + pkgCollective.donation.amount
+
+  const cols = retrieveCols()
+  const printedSpaces = ' '.repeat(cols / 2)
 
   // Assign as the assignment in init happens after mocking
   global.fetch = fetch
@@ -43,6 +47,7 @@ test.serial('it prints everything', async t => {
 
   const content = [
     logo,
+    printedSpaces,
     'Thanks for installing fake 🙏',
     'Please consider donating to our open collective',
     'to help us maintain this package.',
