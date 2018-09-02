@@ -1,5 +1,5 @@
 import test from 'ava'
-import { pkgPaths } from './_helpers'
+import { pkgPath } from './_helpers'
 import { exec } from 'child_process'
 import fetchMock from 'fetch-mock'
 import { promisify } from 'util'
@@ -39,7 +39,7 @@ test.serial('it prints everything', async t => {
     write.apply(process.stdout, arguments)
   })(process.stdout.write)
 
-  await init(pkgPaths.full)
+  await init(pkgPath)
 
   const content = [
     logo,
@@ -58,7 +58,7 @@ test.serial('it prints everything', async t => {
 })
 
 test.serial('it runs the postinstall script after npm install', async t => {
-  const { stdout: rawStdout } = await promisify(exec)('npm i && OPENCOLLECTIVE_FORCE=true npm run postinstall', { cwd: pkgPaths.full })
+  const { stdout: rawStdout } = await promisify(exec)('npm i && OPENCOLLECTIVE_FORCE=true npm run postinstall', { cwd: pkgPath })
   const stdout = rawStdout.toString('utf8')
 
   const content = [

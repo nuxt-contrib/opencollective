@@ -1,13 +1,13 @@
 import test from 'ava'
 import path from 'path'
 import { fetchPkg } from '../../../src/utils/fetch'
-import { pkgPaths, spyOnConsola } from '../../_helpers'
+import { pkgPath, spyOnConsola } from '../../_helpers'
 
 test.beforeEach(spyOnConsola)
 
 test.serial('it can fetch pkg', async t => {
   try {
-    await fetchPkg(pkgPaths.full)
+    await fetchPkg(pkgPath)
   } catch (e) {
     t.fail()
   }
