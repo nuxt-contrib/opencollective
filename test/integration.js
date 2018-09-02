@@ -6,6 +6,7 @@ import { promisify } from 'util'
 import { init } from '../src/init'
 import fetch from 'node-fetch'
 import { formatMoney } from '../src/utils/misc'
+import pkgJsonFull from './fixtures/package-full/package'
 
 test.serial('it prints everything', async t => {
   const logo = 'You are beautiful!'
@@ -18,6 +19,11 @@ test.serial('it prints everything', async t => {
     backersCount: 110,
     contributorsCount: 129
   }
+
+  const formatInCurrency = formatMoney(stats.currency)
+
+  const pkgCollective = pkgJsonFull.collective
+  const url = pkgCollective.url + pkgCollective.donation.slug + '/' + pkgCollective.donation.amount
 
   // Assign as the assignment in init happens after mocking
   global.fetch = fetch
@@ -35,24 +41,31 @@ test.serial('it prints everything', async t => {
 
   await init(pkgPaths.full)
 
-  t.true(log.includes(logo))
-  t.true(log.includes('Thanks for installing fake 🙏'))
-  t.true(log.includes('Please consider donating to our open collective'))
-  t.true(log.includes('to help us maintain this package.'))
-  t.true(log.includes(`Number of contributors: ${stats.contributorsCount}`))
-  t.true(log.includes(`Number of backers: ${stats.backersCount}`))
+  const content = [
+    logo,
+    'Thanks for installing fake 🙏',
+    'Please consider donating to our open collective',
+    'to help us maintain this package.',
+    `Number of contributors: ${stats.contributorsCount}`,
+    `Number of backers: ${stats.backersCount}`,
+    `Annual budget: ${formatInCurrency(stats.yearlyIncome)}`,
+    `Current balance: ${formatInCurrency(stats.balance)}`,
+    pkgCollective.donation.text,
+    url
+  ]
 
-  const formatInCurrency = formatMoney(stats.currency)
-
-  t.true(log.includes(`Annual budget: ${formatInCurrency(stats.yearlyIncome)}`))
-  t.true(log.includes(`Current balance: ${formatInCurrency(stats.balance)}`))
+  content.forEach(c => t.true(log.includes(c)))
 })
 
 test.serial('it runs the postinstall script after npm install', async t => {
   const { stdout: rawStdout } = await promisify(exec)('npm i && OPENCOLLECTIVE_FORCE=true npm run postinstall', { cwd: pkgPaths.full })
   const stdout = rawStdout.toString('utf8')
 
-  t.true(stdout.includes('Thanks for installing fake'))
-  t.true(stdout.includes('Please consider donating to our open collective'))
-  t.true(stdout.includes('to help us maintain this package.'))
+  const content = [
+    'Thanks for installing fake',
+    'Please consider donating to our open collective',
+    'to help us maintain this package.'
+  ]
+
+  content.forEach(c => t.true(stdout.includes(c)))
 })
