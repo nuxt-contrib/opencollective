@@ -15,7 +15,6 @@
     "@nuxtjs/opencollective": "../../../"
   },
   "collective": {
-    "type": "opencollective",
     "url": "https://opencollective.com/fake",
     "logoUrl": "https://opencollective.com/fake/logo.txt?reverse=true&variant=variant2",
     "donation": {
