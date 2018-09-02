@@ -8,9 +8,3 @@ test('retrieveCols returns default value when execSync is NaN', t => {
   t.is(retrieveCols(), 80)
   execStub.restore()
 })
-
-test('retrieveCols returns default value when execSync throws', t => {
-  const execStub = stub(childProcess, 'execSync').throws('ABC')
-  t.is(retrieveCols(), 80)
-  execStub.restore()
-})
