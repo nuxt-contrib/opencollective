@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "chalk": "^2.4.1",
-    "consola": "^1.4.3",
-    "esm": "^3.0.79",
+    "consola": "^2.0.7",
+    "esm": "^3.0.84",
     "node-fetch": "^2.2.0"
   },
   "devDependencies": {
