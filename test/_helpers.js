@@ -4,7 +4,7 @@ import path from 'path'
 
 export const spyOnConsola = t => {
   t.context.consola = spy()
-  consola.clear().add({
+  consola.setReporters({
     log: t.context.consola
   })
 }
