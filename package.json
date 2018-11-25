@@ -8,9 +8,8 @@
       "name": "Alexander Lichter <npm@lichter.io>"
     }
   ],
-  "main": "./src/cjs.js",
-  "module": "./src/index.js",
-  "bin": "./src/cjs.js",
+  "main": "dist/opencollective.cjs.js",
+  "bin": "dist/opencollective.cjs.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuxt-community/opencollective"
@@ -22,18 +21,18 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "nuxt test/fixture",
+    "build": "bili -t node --format cjs src/index.js",
     "lint": "eslint src test",
     "test": "npm run lint && npm run test:coverage",
     "test:ava": "nyc ava --verbose",
     "test:coverage": "nyc --reporter=lcov --reporter=html ava",
     "release": "standard-version && git push --follow-tags && npm publish",
     "commitlint": "commitlint -e $GIT_PARAMS",
-    "coverage": "codecov"
+    "coverage": "codecov",
+    "prepublish": "yarn build"
   },
   "files": [
-    "src",
-    "dst"
+    "dist"
   ],
   "engines": {
     "node": ">=8.0.0",
@@ -42,14 +41,15 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "consola": "^2.0.7",
-    "esm": "^3.0.84",
     "node-fetch": "^2.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
     "ava": "^1.0.0-beta.7",
+    "bili": "^3.4.2",
     "codecov": "^3.0.4",
+    "esm": "^3.0.84",
     "eslint": "^5.4.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-ava": "^5.1.0",
