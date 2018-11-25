@@ -8,7 +8,7 @@ export const reportAndThrowError = msg => {
 export const report = message => {
   consola.fatal({
     message: String(message),
-    tags: 'opencollective'
+    tag: 'opencollective'
   })
 }
 
