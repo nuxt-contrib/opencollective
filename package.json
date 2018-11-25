@@ -23,7 +23,7 @@
   "scripts": {
     "build": "bili -t node --format cjs src/index.js",
     "lint": "eslint src test",
-    "test": "npm run lint && npm run test:coverage",
+    "test": "yarn lint && yarn test:coverage",
     "test:ava": "nyc ava --verbose",
     "test:coverage": "nyc --reporter=lcov --reporter=html ava",
     "release": "standard-version && git push --follow-tags && npm publish",

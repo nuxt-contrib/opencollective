@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /usr/src/app
     environment:
-      OPENCOLLECTIVE_FORCE: true
+      OPENCOLLECTIVE_FORCE: "true"
     docker:
       - image: banian/node
     steps:
@@ -12,7 +12,7 @@ jobs:
 
       # Restore cache
       - restore_cache:
-          key: npm-{{ checksum "package-lock.json" }}
+          key: npm-{{ checksum "yarn.lock" }}
 
       # Install dependencies
       - run:
@@ -21,15 +21,16 @@ jobs:
 
       # Keep cache
       - save_cache:
-          key: npm-{{ checksum "package-lock.json" }}
+          key: npm-{{ checksum "yarn.lock" }}
           paths:
             - "node_modules"
+
       # Test
       - run:
           name: Tests
-          command: npm t
+          command: yarn test
 
       # Coverage
       - run:
           name: Coverage
-          command: npm run coverage
+          command: yarn coverage
