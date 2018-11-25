@@ -27,16 +27,17 @@ features, we decided to spin off our one own. Our key goals are:
 
 - Add `@nuxtjs/opencollective` dependency using yarn or npm to your project
 - Add the script to `postinstall` in your package.json
-```json
+
+```js
 {
-  ...
+  // ...
   "scripts": {
     "postinstall": "opencollective"
   },
   "collective": {
     "url": "https://opencollective.com/nuxtjs"
   }
-  ...
+  // ...
 }
 ```
 
