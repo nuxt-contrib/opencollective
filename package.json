@@ -40,8 +40,8 @@
   },
   "dependencies": {
     "chalk": "^2.4.1",
-    "consola": "^2.0.7",
-    "node-fetch": "^2.2.0"
+    "consola": "^2.3.0",
+    "node-fetch": "^2.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
