@@ -43,7 +43,7 @@ test.serial('it prints everything', async t => {
     write.apply(process.stdout, arguments)
   })(process.stdout.write)
 
-  await init(pkgPath)
+  await init(pkgPath, false)
 
   const content = [
     logo,
@@ -62,8 +62,8 @@ test.serial('it prints everything', async t => {
   content.forEach(c => t.true(log.includes(c)))
 })
 
-test.serial('it runs the postinstall script after npm install', async t => {
-  const { stdout: rawStdout } = await promisify(exec)('npm i && OPENCOLLECTIVE_FORCE=true npm run postinstall', { cwd: pkgPath })
+test.serial('yarn postinstall script works as expected', async t => {
+  const { stdout: rawStdout } = await promisify(exec)('yarn postinstall', { cwd: pkgPath })
   const stdout = rawStdout.toString('utf8')
 
   const content = [

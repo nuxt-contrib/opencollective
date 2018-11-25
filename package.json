@@ -9,7 +9,7 @@
     }
   ],
   "main": "dist/opencollective.cjs.js",
-  "bin": "dist/opencollective.cjs.js",
+  "bin": "bin/opencollective.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuxt-community/opencollective"
