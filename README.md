@@ -1,9 +1,9 @@
 # @nuxtjs/opencollective 🤝 Pretty opencollective stats on postinstall!
 [![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/opencollective/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/opencollective)
 [![npm](https://img.shields.io/npm/dt/@nuxtjs/opencollective.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/opencollective)
-[![CircleCI](https://img.shields.io/circleci/project/github/nuxt-community/opencollective.svg?style=flat-square)](https://circleci.com/gh/nuxt-community/opencollective)
-[![Codecov](https://img.shields.io/codecov/c/github/nuxt-community/opencollective.svg?style=flat-square)](https://codecov.io/gh/nuxt-community/opencollective)
-[![Dependencies](https://david-dm.org/nuxt-community/opencollective/status.svg?style=flat-square)](https://david-dm.org/nuxt-community/opencollective)
+[![CircleCI](https://img.shields.io/circleci/project/github/nuxt/opencollective.svg?style=flat-square)](https://circleci.com/gh/nuxt/opencollective)
+[![Codecov](https://img.shields.io/codecov/c/github/nuxt/opencollective.svg?style=flat-square)](https://codecov.io/gh/nuxt/opencollective)
+[![Dependencies](https://david-dm.org/nuxt/opencollective/status.svg?style=flat-square)](https://david-dm.org/nuxt/opencollective)
 [![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
 
 ![Showcase](https://i.imgur.com/PZqyT3x.jpg)
@@ -27,16 +27,17 @@ features, we decided to spin off our one own. Our key goals are:
 
 - Add `@nuxtjs/opencollective` dependency using yarn or npm to your project
 - Add the script to `postinstall` in your package.json
-```json
+
+```js
 {
-  ...
+  // ...
   "scripts": {
     "postinstall": "opencollective"
   },
   "collective": {
     "url": "https://opencollective.com/nuxtjs"
   }
-  ...
+  // ...
 }
 ```
 

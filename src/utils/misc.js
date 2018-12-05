@@ -1,14 +1,15 @@
 import consola from 'consola'
 
-const reporter = consola.withTag('nuxt-opencollective')
-
 export const reportAndThrowError = msg => {
   report(msg)
   throw new Error(msg)
 }
 
-export const report = msg => {
-  reporter.fatal(msg)
+export const report = message => {
+  consola.fatal({
+    message: String(message),
+    tag: 'opencollective'
+  })
 }
 
 export const hideMessage = (env = process.env) => {

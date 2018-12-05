@@ -7,13 +7,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "postinstall": "OPENCOLLECTIVE_FORCE=true opencollective"
+    "postinstall": "OPENCOLLECTIVE_FORCE=true ../../../bin/opencollective.js"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "@nuxtjs/opencollective": "../../../"
-  },
   "collective": {
     "url": "https://opencollective.com/fake",
     "logoUrl": "https://opencollective.com/fake/logo.txt?reverse=true&variant=variant2",
