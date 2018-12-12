@@ -3,9 +3,11 @@ import fs from 'fs'
 import { collectiveSlugFromUrl } from './transforms'
 import { report, reportAndThrowError } from './misc'
 
+const FETCH_TIMEOUT = 3000
+
 const fetchJson = async url => {
   try {
-    return (await global.fetch(`${url}.json`)).json()
+    return (await global.fetch(`${url}.json`, { timeout: FETCH_TIMEOUT })).json()
   } catch (e) {
     report(e)
     reportAndThrowError(`Could not fetch ${url}.json`)
@@ -31,7 +33,7 @@ export const fetchLogo = async logoUrl => {
   }
 
   try {
-    const res = (await global.fetch(logoUrl))
+    const res = (await global.fetch(logoUrl, { timeout: FETCH_TIMEOUT }))
     if (isLogoResponseWellFormatted(res)) {
       return res.text()
     }
