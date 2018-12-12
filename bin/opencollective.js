@@ -2,4 +2,5 @@
 
 require('../dist/opencollective.cjs')
   .init(process.argv.length > 2 ? process.argv[2] : '.')
-  .catch(process.exit(1))
+  .then(() => process.exit(0))
+  .catch(() => process.exit(1))
