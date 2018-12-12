@@ -2,4 +2,5 @@
 
 require('../dist/opencollective.cjs')
   .init(process.argv.length > 2 ? process.argv[2] : '.')
-  .catch(console.error) // eslint-disable-line no-console
+  .then(() => process.exit(0))
+  .catch(() => process.exit(1))
