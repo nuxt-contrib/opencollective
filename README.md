@@ -32,7 +32,7 @@ features, we decided to spin off our one own. Our key goals are:
 {
   // ...
   "scripts": {
-    "postinstall": "opencollective"
+    "postinstall": "opencollective || exit 0"
   },
   "collective": {
     "url": "https://opencollective.com/nuxtjs"
