@@ -6,7 +6,7 @@ export const reportAndThrowError = msg => {
 }
 
 export const report = message => {
-  consola.fatal({
+  consola.debug({
     message: String(message),
     tag: 'opencollective'
   })
