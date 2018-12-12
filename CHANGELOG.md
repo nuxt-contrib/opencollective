@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/nuxt-community/opencollective/compare/v0.2.0...v0.2.1) (2018-12-12)
+
+
+### Bug Fixes
+
+* **bin:** force exit process ([#4](https://github.com/nuxt-community/opencollective/issues/4)) ([b5b0a81](https://github.com/nuxt-community/opencollective/commit/b5b0a81))
+* gracefully handle network errors ([#3](https://github.com/nuxt-community/opencollective/issues/3)) ([04df30a](https://github.com/nuxt-community/opencollective/commit/04df30a))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/nuxt-community/opencollective/compare/v0.1.0...v0.2.0) (2018-11-25)
 
