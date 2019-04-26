@@ -25,6 +25,7 @@ test(tHideMessage, { CONTINUOUS_INTEGRATION: true }, true)
 test(tHideMessage, { NODE_ENV: 'production' }, true)
 test(tHideMessage, { NODE_ENV: 'dev' }, false)
 test(tHideMessage, { NODE_ENV: 'development' }, false)
+// `opencollective-postinstall` compatability
 test(tHideMessage, { DISABLE_OPENCOLLECTIVE: 'true' }, true)
 test(tHideMessage, { DISABLE_OPENCOLLECTIVE: 'false' }, false)
 test(tHideMessage, { DISABLE_OPENCOLLECTIVE: '0' }, false)
