@@ -27,6 +27,15 @@ export const hideMessage = (env = process.env) => {
     return true
   }
 
+  // Compatability with opencollective-postinstall
+  if (
+    !!env.DISABLE_OPENCOLLECTIVE &&
+    env.DISABLE_OPENCOLLECTIVE !== '0' &&
+    env.DISABLE_OPENCOLLECTIVE !== 'false'
+  ) {
+    return true
+  }
+
   // Don't show if on CI
   if (env.CI || env.CONTINUOUS_INTEGRATION) {
     return true
