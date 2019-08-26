@@ -21,7 +21,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "bili -t node --format cjs src/index.js",
+    "build": "bili -t node --format cjs --file-name opencollective.cjs src/index.js",
     "lint": "eslint src test",
     "test": "yarn lint && yarn test:coverage",
     "test:ava": "nyc ava --verbose",
