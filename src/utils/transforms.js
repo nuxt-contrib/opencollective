@@ -39,7 +39,7 @@ export const getCollective = async pkgPath => {
 export const collectiveDonationUrl = pkg => {
   const defaultDonationAmount = pkg.collective.donation && pkg.collective.donation.amount
 
-  let donateUrl = `${collectiveUrl(pkg)}/${retrieveDonationSlug(pkg)}`
+  const donateUrl = `${collectiveUrl(pkg)}/${retrieveDonationSlug(pkg)}`
 
   if (defaultDonationAmount) {
     return `${donateUrl}/${defaultDonationAmount}`

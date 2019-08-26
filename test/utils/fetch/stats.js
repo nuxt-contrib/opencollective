@@ -11,13 +11,13 @@ test.afterEach(t => {
 
 test.serial('it can fetch stats', async t => {
   const responseObject = {
-    'slug': 'nuxtjs',
-    'currency': 'USD',
-    'image': 'https://opencollective-production.s3-us-west-1.amazonaws.com/251e1a10-369b-11e7-8ad6-5967d7493bb7.png',
-    'balance': 435949,
-    'yearlyIncome': 2528815,
-    'backersCount': 110,
-    'contributorsCount': 129
+    slug: 'nuxtjs',
+    currency: 'USD',
+    image: 'https://opencollective-production.s3-us-west-1.amazonaws.com/251e1a10-369b-11e7-8ad6-5967d7493bb7.png',
+    balance: 435949,
+    yearlyIncome: 2528815,
+    backersCount: 110,
+    contributorsCount: 129
   }
   fetchMock.mock('*', responseObject)
   try {

@@ -6,6 +6,7 @@ import { promisify } from 'util'
 import { init } from '../src/init'
 import fetch from 'node-fetch'
 import { formatMoney } from '../src/utils/misc'
+// eslint-disable-next-line ava/no-import-test-files
 import pkgJsonFull from './fixtures/package-full/package'
 import { retrieveCols } from '../src/utils/print'
 

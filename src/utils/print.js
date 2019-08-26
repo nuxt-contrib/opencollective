@@ -25,7 +25,7 @@ export const retrieveCols = (() => {
     }
     const defaultCols = 80
     try {
-      const terminalCols = execSync(`tput cols`, { stdio: ['pipe', 'pipe', 'ignore'] })
+      const terminalCols = execSync('tput cols', { stdio: ['pipe', 'pipe', 'ignore'] })
       result = parseInt(terminalCols.toString()) || defaultCols
     } catch (e) {
       result = defaultCols
@@ -70,8 +70,8 @@ export function printFooter (collective) {
   const emptyLine = print()
 
   yellow(`Thanks for installing ${collective.slug} ${emoji('🙏')}`)
-  dim(`Please consider donating to our open collective`)
-  dim(`to help us maintain this package.`)
+  dim('Please consider donating to our open collective')
+  dim('to help us maintain this package.')
   emptyLine()
   printStats(collective.stats)
   emptyLine()
