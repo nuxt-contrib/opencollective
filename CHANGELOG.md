@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/nuxt-community/opencollective/compare/v0.2.2...v0.3.0) (2019-08-26)
+
+
+### Bug Fixes
+
+* build step ([af95080](https://github.com/nuxt-community/opencollective/commit/af95080))
+
+
+### Features
+
+* add opt out compatibility with `opencollective-postinstall` (closes [#7](https://github.com/nuxt-community/opencollective/issues/7)) ([#8](https://github.com/nuxt-community/opencollective/issues/8)) ([aed4a80](https://github.com/nuxt-community/opencollective/commit/aed4a80))
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/nuxt-community/opencollective/compare/v0.2.1...v0.2.2) (2019-04-02)
 
