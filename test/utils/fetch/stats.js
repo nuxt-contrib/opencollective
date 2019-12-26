@@ -1,6 +1,6 @@
+import fetchMock from 'fetch-mock'
 import test from 'ava'
 import { fetchStats } from '../../../src/utils/fetch'
-import fetchMock from 'fetch-mock'
 import { spyOnConsola } from '../../_helpers'
 
 test.beforeEach(spyOnConsola)

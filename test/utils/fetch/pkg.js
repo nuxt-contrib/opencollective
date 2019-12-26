@@ -1,5 +1,5 @@
-import test from 'ava'
 import path from 'path'
+import test from 'ava'
 import { fetchPkg } from '../../../src/utils/fetch'
 import { pkgPath, spyOnConsola } from '../../_helpers'
 

@@ -1,14 +1,14 @@
-import test from 'ava'
-import { pkgPath } from './_helpers'
 import { exec } from 'child_process'
-import fetchMock from 'fetch-mock'
 import { promisify } from 'util'
-import { init } from '../src/init'
+import fetchMock from 'fetch-mock'
+import test from 'ava'
 import fetch from 'node-fetch'
+import { init } from '../src/init'
 import { formatMoney } from '../src/utils/misc'
+import { retrieveCols } from '../src/utils/print'
 // eslint-disable-next-line ava/no-import-test-files
 import pkgJsonFull from './fixtures/package-full/package'
-import { retrieveCols } from '../src/utils/print'
+import { pkgPath } from './_helpers'
 
 const logo = 'You are beautiful!'
 const stats = {

@@ -10,7 +10,7 @@ module.exports = {
     'vue',
     'ava'
   ],
-  extends: ['standard', 'plugin:ava/recommended'],
+  extends: ['@nuxtjs', 'plugin:nuxt/recommended'],
   rules: {
     // Allow paren-less arrow functions
     'arrow-parens': 0,

@@ -1,5 +1,5 @@
-import { hideMessage } from '../../../src/utils/misc'
 import test from 'ava'
+import { hideMessage } from '../../../src/utils/misc'
 
 function tHideMessage (t, input, expected) {
   t.is(input ? hideMessage(input) : hideMessage(), expected)

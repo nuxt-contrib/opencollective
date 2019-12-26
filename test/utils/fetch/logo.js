@@ -1,7 +1,8 @@
+/* eslint-disable require-await */
 import test from 'ava'
+import fetchMock from 'fetch-mock'
 import { fetchLogo } from '../../../src/utils/fetch'
 import { spyOnConsola } from '../../_helpers'
-import fetchMock from 'fetch-mock'
 
 test.beforeEach(spyOnConsola)
 
