@@ -40,7 +40,7 @@
     "npm": ">=5.0.0"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^4.1.0",
     "consola": "^2.10.1",
     "node-fetch": "^2.6.0"
   },
