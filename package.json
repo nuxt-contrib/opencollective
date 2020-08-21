@@ -47,7 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "ava": "^2.3.0",
+    "ava": "^3.11.1",
     "bili": "^4.8.1",
     "codecov": "^3.5.0",
     "eslint": "^6.2.2",
