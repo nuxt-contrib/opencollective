@@ -45,8 +45,8 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
     "ava": "^2.3.0",
     "bili": "^4.8.1",
     "codecov": "^3.5.0",
