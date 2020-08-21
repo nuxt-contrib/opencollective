@@ -50,7 +50,7 @@
     "ava": "^2.3.0",
     "bili": "^4.8.1",
     "codecov": "^3.5.0",
-    "eslint": "^6.2.2",
+    "eslint": "^7.7.0",
     "eslint-config-standard": "^14.0.1",
     "eslint-plugin-ava": "^8.0.0",
     "eslint-plugin-import": "^2.18.2",
