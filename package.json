@@ -63,7 +63,7 @@
     "husky": "^3.0.4",
     "nyc": "^14.1.1",
     "sinon": "^7.4.1",
-    "standard-version": "^7.0.0"
+    "standard-version": "^8.0.0"
   },
   "ava": {
     "require": [
