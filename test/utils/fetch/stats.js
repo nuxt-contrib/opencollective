@@ -1,15 +1,15 @@
 import test from 'ava'
-import { fetchStats } from '../../../src/utils/fetch'
 import fetchMock from 'fetch-mock'
+import { fetchStats } from '../../../src/utils/fetch'
 import { spyOnConsola } from '../../_helpers'
 
 test.beforeEach(spyOnConsola)
 
-test.afterEach(t => {
+test.afterEach((t) => {
   fetchMock.restore()
 })
 
-test.serial('it can fetch stats', async t => {
+test.serial('it can fetch stats', async (t) => {
   const responseObject = {
     slug: 'nuxtjs',
     currency: 'USD',
@@ -29,7 +29,7 @@ test.serial('it can fetch stats', async t => {
   fetchMock.restore()
 })
 
-test.serial('it throws error when receiving invalid json while fetching stats', async t => {
+test.serial('it throws error when receiving invalid json while fetching stats', async (t) => {
   const responseObject = 'oh no! It\'s no JSON'
   fetchMock.mock('*', responseObject)
   try {
@@ -42,7 +42,7 @@ test.serial('it throws error when receiving invalid json while fetching stats', 
   }
 })
 
-test.serial('it throws error when cannot connect to url while fetching stats', async t => {
+test.serial('it throws error when cannot connect to url while fetching stats', async (t) => {
   fetchMock.mock('*', { throws: 'error' })
   try {
     const stats = await fetchStats('https://opencollective.com/fakecollective')

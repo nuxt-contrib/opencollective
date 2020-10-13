@@ -3,7 +3,7 @@ import { fetchLogo, fetchPkg, fetchStats } from './fetch'
 
 export const collectiveSlugFromUrl = url => url.substr(url.lastIndexOf('/') + 1).toLowerCase().replace(/\.json/g, '')
 
-export const collectiveUrl = pkg => {
+export const collectiveUrl = (pkg) => {
   const url = pkg.collective && pkg.collective.url
 
   if (!url) {
@@ -18,7 +18,7 @@ export const collectiveLogoUrl = pkg => pkg.collective.logo || pkg.collective.lo
 
 export const collectiveDonationText = pkg => (pkg.collective.donation && pkg.collective.donation.text) || 'Donate:'
 
-export const getCollective = async pkgPath => {
+export const getCollective = async (pkgPath) => {
   const pkg = fetchPkg(pkgPath)
   const url = collectiveUrl(pkg)
   const baseCollective = {
@@ -36,7 +36,7 @@ export const getCollective = async pkgPath => {
   return Object.assign(baseCollective, { stats, logo })
 }
 
-export const collectiveDonationUrl = pkg => {
+export const collectiveDonationUrl = (pkg) => {
   const defaultDonationAmount = pkg.collective.donation && pkg.collective.donation.amount
 
   const donateUrl = `${collectiveUrl(pkg)}/${retrieveDonationSlug(pkg)}`
@@ -48,7 +48,7 @@ export const collectiveDonationUrl = pkg => {
   return donateUrl
 }
 
-export const retrieveDonationSlug = pkg => {
+export const retrieveDonationSlug = (pkg) => {
   const rawDonationSlug = (pkg.collective.donation && pkg.collective.donation.slug)
 
   if (!rawDonationSlug) {

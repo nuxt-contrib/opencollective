@@ -1,11 +1,11 @@
-import test from 'ava'
 import path from 'path'
+import test from 'ava'
 import { fetchPkg } from '../../../src/utils/fetch'
 import { pkgPath, spyOnConsola } from '../../_helpers'
 
 test.beforeEach(spyOnConsola)
 
-test.serial('it can fetch pkg', async t => {
+test.serial('it can fetch pkg', async (t) => {
   try {
     await fetchPkg(pkgPath)
   } catch (e) {
@@ -14,7 +14,7 @@ test.serial('it can fetch pkg', async t => {
   t.false(t.context.consola.called)
 })
 
-test.serial('it throws an error if pkg is not available', t => {
+test.serial('it throws an error if pkg is not available', (t) => {
   const errorString = `Could not find package.json at ${path.resolve('test')}/package.json`
   t.throws(() => fetchPkg(path.resolve('test')), { message: errorString })
 

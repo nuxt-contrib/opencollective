@@ -1,7 +1,7 @@
 import test from 'ava'
 import { collectiveDonationUrl } from '../../../src/utils/transforms'
 
-test('donation url returns default if no slug is provided', t => {
+test('donation url returns default if no slug is provided', (t) => {
   const pkgWithoutDonation = { collective: { url: 'https://example.com/' } }
   t.is(collectiveDonationUrl(pkgWithoutDonation), 'https://example.com/donate')
 

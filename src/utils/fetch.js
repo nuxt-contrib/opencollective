@@ -5,7 +5,7 @@ import { report, reportAndThrowError } from './misc'
 
 const FETCH_TIMEOUT = 3000
 
-const fetchJson = async url => {
+const fetchJson = async (url) => {
   try {
     return (await global.fetch(`${url}.json`, { timeout: FETCH_TIMEOUT })).json()
   } catch (e) {
@@ -14,7 +14,7 @@ const fetchJson = async url => {
   }
 }
 
-export const fetchStats = async collectiveUrl => {
+export const fetchStats = async (collectiveUrl) => {
   try {
     return await fetchJson(collectiveUrl)
   } catch (e) {
@@ -23,7 +23,7 @@ export const fetchStats = async collectiveUrl => {
   }
 }
 
-export const fetchLogo = async logoUrl => {
+export const fetchLogo = async (logoUrl) => {
   if (!logoUrl) {
     // Silent return if no logo has been provided
     return
@@ -45,7 +45,7 @@ export const fetchLogo = async logoUrl => {
 
 const isLogoResponseWellFormatted = res => res.status === 200 && res.headers.get('content-type').match(/^text\/plain/)
 
-export const fetchPkg = pathToPkg => {
+export const fetchPkg = (pathToPkg) => {
   const fullPathToPkg = path.resolve(`${pathToPkg}/package.json`)
   try {
     return JSON.parse(fs.readFileSync(fullPathToPkg, 'utf8'))

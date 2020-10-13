@@ -4,15 +4,15 @@ import { spyOnConsola } from '../../_helpers'
 
 test.beforeEach(spyOnConsola)
 
-test('throws error and kills process if not present', t => {
+test('throws error and kills process if not present', (t) => {
   const errorMessage = 'No collective URL set!'
   const pkgWithoutUrl = { collective: {} }
 
-  t.throws(() => collectiveUrl(pkgWithoutUrl), errorMessage)
+  t.throws(() => collectiveUrl(pkgWithoutUrl), { message: errorMessage })
   t.is(t.context.consola.firstCall.lastArg.message, errorMessage)
 
   const emptyPkg = {}
 
-  t.throws(() => collectiveUrl(emptyPkg), errorMessage)
+  t.throws(() => collectiveUrl(emptyPkg), { message: errorMessage })
   t.is(t.context.consola.firstCall.lastArg.message, errorMessage)
 })

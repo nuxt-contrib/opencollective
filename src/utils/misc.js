@@ -1,11 +1,11 @@
 import consola from 'consola'
 
-export const reportAndThrowError = msg => {
+export const reportAndThrowError = (msg) => {
   report(msg)
   throw new Error(msg)
 }
 
-export const report = message => {
+export const report = (message) => {
   consola.debug({
     message: String(message),
     tag: 'opencollective'
@@ -45,14 +45,14 @@ export const hideMessage = (env = process.env) => {
   return Boolean(env.NODE_ENV) && !['dev', 'development'].includes(env.NODE_ENV)
 }
 
-export const formatMoney = currency => amount => {
+export const formatMoney = currency => (amount) => {
   amount = amount / 100 // converting cents
 
   const precision = 0
 
   return amount.toLocaleString(currency, {
     style: 'currency',
-    currency: currency,
+    currency,
     minimumFractionDigits: precision,
     maximumFractionDigits: precision
   })

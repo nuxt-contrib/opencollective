@@ -1,14 +1,13 @@
-import test from 'ava'
-import { pkgPath } from './_helpers'
 import { exec } from 'child_process'
-import fetchMock from 'fetch-mock'
 import { promisify } from 'util'
-import { init } from '../src/init'
+import fetchMock from 'fetch-mock'
+import test from 'ava'
 import fetch from 'node-fetch'
+import { init } from '../src/init'
 import { formatMoney } from '../src/utils/misc'
-// eslint-disable-next-line ava/no-import-test-files
-import pkgJsonFull from './fixtures/package-full/package'
 import { retrieveCols } from '../src/utils/print'
+import { pkgPath } from './_helpers'
+import pkgJsonFull from './fixtures/package-full/package'
 
 const logo = 'You are beautiful!'
 const stats = {
@@ -21,7 +20,7 @@ const stats = {
   contributorsCount: 129
 }
 
-test.before(t => {
+test.before((t) => {
   // Assign as the assignment in init happens after mocking
   global.fetch = fetch
   fetchMock.mock('https://opencollective.com/fake.json', stats)
@@ -31,11 +30,11 @@ test.before(t => {
   })
 })
 
-test.beforeEach(t => {
+test.beforeEach((t) => {
   fetchMock.resetHistory()
 })
 
-test.serial('it prints everything', async t => {
+test.serial('it prints everything', async (t) => {
   const formatInCurrency = formatMoney(stats.currency)
 
   const pkgCollective = pkgJsonFull.collective
@@ -55,7 +54,7 @@ test.serial('it prints everything', async t => {
   const content = [
     logo,
     printedSpaces,
-    'Thanks for installing fake 🙏',
+    'Thanks for installing fake',
     'Please consider donating to our open collective',
     'to help us maintain this package.',
     `Number of contributors: ${stats.contributorsCount}`,
@@ -69,7 +68,7 @@ test.serial('it prints everything', async t => {
   content.forEach(c => t.true(log.includes(c)))
 })
 
-test.serial('it prints nothing when hide is true', async t => {
+test.serial('it prints nothing when hide is true', async (t) => {
   let log = ''
   process.stdout.write = (write => function (string, encoding, fileDescriptor) {
     log += string
@@ -82,7 +81,7 @@ test.serial('it prints nothing when hide is true', async t => {
   t.is(log.trim(), '')
 })
 
-test.serial('yarn postinstall script works as expected', async t => {
+test.serial('yarn postinstall script works as expected', async (t) => {
   const { stdout: rawStdout } = await promisify(exec)('yarn postinstall', { cwd: pkgPath })
   const stdout = rawStdout.toString('utf8')
 
