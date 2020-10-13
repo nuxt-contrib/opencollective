@@ -24,14 +24,14 @@
     ]
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "consola": "^2.10.1",
-    "node-fetch": "^2.6.0"
+    "chalk": "^4.1.0",
+    "consola": "^2.15.0",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-config": "latest",
     "ava": "latest",
     "bili": "latest",
     "eslint": "latest",
