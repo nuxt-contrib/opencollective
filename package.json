@@ -29,17 +29,17 @@
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
-    "@nuxtjs/eslint-config": "latest",
-    "ava": "latest",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@nuxtjs/eslint-config": "^10.0.0",
+    "ava": "^4.2.0",
     "bili": "latest",
-    "eslint": "latest",
+    "eslint": "^8.15.0",
     "esm": "latest",
-    "fetch-mock": "latest",
+    "fetch-mock": "^9.11.0",
     "nyc": "latest",
-    "sinon": "latest",
-    "standard-version": "latest"
+    "sinon": "^14.0.0",
+    "standard-version": "^9.5.0"
   },
   "engines": {
     "node": ">=8.0.0",
