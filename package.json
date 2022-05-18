@@ -20,7 +20,7 @@
   },
   "ava": {
     "require": [
-      "esm"
+      "jiti/register"
     ]
   },
   "dependencies": {
@@ -35,8 +35,8 @@
     "ava": "^4.2.0",
     "bili": "latest",
     "eslint": "^8.15.0",
-    "esm": "latest",
     "fetch-mock": "^9.11.0",
+    "jiti": "^1.13.0",
     "nyc": "latest",
     "sinon": "^14.0.0",
     "standard-version": "^9.5.0"
