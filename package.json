@@ -31,14 +31,14 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
-    "@nuxtjs/eslint-config": "^10.0.0",
-    "ava": "^4.2.0",
+    "@nuxtjs/eslint-config": "^12.0.0",
+    "ava": "^5.3.0",
     "bili": "latest",
     "eslint": "^8.15.0",
     "fetch-mock": "^9.11.0",
     "jiti": "^1.13.0",
     "nyc": "latest",
-    "sinon": "^14.0.0",
+    "sinon": "^15.1.0",
     "standard-version": "^9.5.0"
   },
   "engines": {
