@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import { fetch } from 'node-fetch-native'
 import { printFooter, printLogo } from './utils/print'
 import { getCollective } from './utils/transforms'
 import { hideMessage } from './utils/misc'
