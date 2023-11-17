@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/nuxt-contrib/opencollective/compare/v0.3.3...v0.4.0) (2023-11-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** bump `consola` and use `node-fetch-native` (#75)
+
+* **deps:** bump `consola` and use `node-fetch-native` ([#75](https://github.com/nuxt-contrib/opencollective/issues/75)) ([44af7a0](https://github.com/nuxt-contrib/opencollective/commit/44af7a06ee0d49aa739e71d8c0d6938af4832579))
+
 ### [0.3.3](https://github.com/nuxt-contrib/opencollective/compare/v0.3.2...v0.3.3) (2022-05-18)
 
 ### [0.3.2](https://github.com/nuxt-contrib/opencollective/compare/v0.3.1...v0.3.2) (2020-10-13)
