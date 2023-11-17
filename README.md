@@ -117,5 +117,5 @@ MIT. Made with 💖
 [npm-d-src]: https://img.shields.io/npm/dm/@nuxtjs/opencollective?style=flat-square
 [npm-d-href]: https://npmjs.com/package/@nuxtjs/opencollective
 
-[github-actions-src]: https://img.shields.io/github/workflow/status/nuxt-contrib/opencollective/ci/master?style=flat-square
+[github-actions-src]: https://img.shields.io/github/workflow/status/nuxt-contrib/opencollective/ci/main?style=flat-square
 [github-actions-href]: https://github.com/nuxt-contrib/opencollective/actions?query=workflow%3Aci
