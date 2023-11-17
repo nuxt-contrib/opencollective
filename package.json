@@ -39,7 +39,7 @@
     "fetch-mock": "^9.11.0",
     "jiti": "^1.13.0",
     "nyc": "latest",
-    "sinon": "^15.1.0",
+    "sinon": "^17.0.1",
     "standard-version": "^9.5.0"
   },
   "engines": {
