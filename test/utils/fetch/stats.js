@@ -35,7 +35,7 @@ test.serial('it throws error when receiving invalid json while fetching stats', 
   try {
     const stats = await fetchStats('https://opencollective.com/fakecollective')
     t.is(stats, undefined)
-    t.is(t.context.consola.firstCall.lastArg.message, 'FetchError: invalid json response body at https://opencollective.com/fakecollective.json reason: Unexpected token o in JSON at position 0')
+    t.is(t.context.consola.firstCall.lastArg.message, 'SyntaxError: Unexpected token o in JSON at position 0')
     t.is(t.context.consola.secondCall.lastArg.message, 'Could not load the stats for fakecollective')
   } catch (e) {
     t.fail()
