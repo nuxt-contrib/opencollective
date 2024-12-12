@@ -37,6 +37,7 @@
     "fetch-mock": "^9.11.0",
     "installed-check": "^9.3.0",
     "jiti": "^1.21.6",
+    "node-fetch": "npm:node-fetch-native@^1.6.4",
     "nyc": "latest",
     "sinon": "^17.0.1",
     "standard-version": "^9.5.0"

@@ -32,13 +32,16 @@ importers:
         version: 8.57.1
       fetch-mock:
         specifier: ^9.11.0
-        version: 9.11.0
+        version: 9.11.0(node-fetch-native@1.6.4)
       installed-check:
         specifier: ^9.3.0
         version: 9.3.0
       jiti:
         specifier: ^1.21.6
         version: 1.21.6
+      node-fetch:
+        specifier: npm:node-fetch-native@^1.6.4
+        version: node-fetch-native@1.6.4
       nyc:
         specifier: latest
         version: 17.1.0
@@ -2820,6 +2823,9 @@ packages:
 
   nise@5.1.9:
     resolution: {integrity: sha512-qOnoujW4SV6e40dYxJOb3uvuoPHtmLzIk4TFo+j0jPJoC+5Z9xja5qH5JZobEPsa8+YYphMrOSwnrshEhG2qww==}
+
+  node-fetch-native@1.6.4:
+    resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
 
   node-preload@0.2.1:
     resolution: {integrity: sha512-RM5oyBy45cLEoHqCeh+MNuFAxO0vTFBLskvQbOKnEE7YTTSN4tbN8QWDIPQ6L+WvKsB/qLEGpYe2ZZ9d4W9OIQ==}
@@ -6472,7 +6478,7 @@ snapshots:
     dependencies:
       reusify: 1.0.4
 
-  fetch-mock@9.11.0:
+  fetch-mock@9.11.0(node-fetch-native@1.6.4):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/runtime': 7.26.0
@@ -6484,6 +6490,8 @@ snapshots:
       path-to-regexp: 2.4.0
       querystring: 0.2.1
       whatwg-url: 6.5.0
+    optionalDependencies:
+      node-fetch: node-fetch-native@1.6.4
     transitivePeerDependencies:
       - supports-color
 
@@ -7344,6 +7352,8 @@ snapshots:
       '@sinonjs/text-encoding': 0.7.3
       just-extend: 6.2.0
       path-to-regexp: 6.3.0
+
+  node-fetch-native@1.6.4: {}
 
   node-preload@0.2.1:
     dependencies:
