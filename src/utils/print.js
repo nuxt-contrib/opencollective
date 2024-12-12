@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-control-regex */
 import { execSync } from 'child_process'
-import chalk from 'chalk'
+import { colors } from 'consola/utils'
 import { formatMoney, isWin32 } from './misc'
 
 export const print = (color = null) => (str = '') => {
@@ -10,7 +10,7 @@ export const print = (color = null) => (str = '') => {
   const leftPaddingLength = Math.floor((terminalCols - strLength) / 2)
   const leftPadding = ' '.repeat(Math.max(leftPaddingLength, 0))
   if (color) {
-    str = chalk[color](str)
+    str = colors[color] ? colors[color](str) : str
   }
 
   console.log(leftPadding, str)
@@ -75,6 +75,6 @@ export function printFooter (collective) {
   emptyLine()
   printStats(collective.stats)
   emptyLine()
-  print()(`${chalk.bold(`${emoji('👉 ')} ${collective.donationText}`)} ${chalk.underline(collective.donationUrl)}`)
+  print()(`${colors.bold(`${emoji('👉 ')} ${collective.donationText}`)} ${colors.underline(collective.donationUrl)}`)
   emptyLine()
 }

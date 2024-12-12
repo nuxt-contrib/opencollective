@@ -2,7 +2,6 @@ import { exec } from 'child_process'
 import { promisify } from 'util'
 import fetchMock from 'fetch-mock'
 import test from 'ava'
-import { fetch } from 'node-fetch-native'
 import { init } from '../src/init'
 import { formatMoney } from '../src/utils/misc'
 import { retrieveCols } from '../src/utils/print'
@@ -21,8 +20,6 @@ const stats = {
 }
 
 test.before((t) => {
-  // Assign as the assignment in init happens after mocking
-  global.fetch = fetch
   fetchMock.mock('https://opencollective.com/fake.json', stats)
   fetchMock.mock('https://opencollective.com/fake/logo.txt?reverse=true&variant=variant2', {
     body: logo,
