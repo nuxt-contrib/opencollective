@@ -43,8 +43,8 @@ importers:
         specifier: ^9.3.0
         version: 9.3.0
       jiti:
-        specifier: ^1.21.6
-        version: 1.21.6
+        specifier: ^2.4.1
+        version: 2.4.1
       node-fetch:
         specifier: npm:node-fetch-native@^1.6.4
         version: node-fetch-native@1.6.4
@@ -2504,8 +2504,8 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
 
-  jiti@1.21.6:
-    resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
+  jiti@2.4.1:
+    resolution: {integrity: sha512-yPBThwecp1wS9DmoA4x4KR2h3QoslacnDR8ypuFM962kI4/456Iy1oHx2RAgh4jfZNdn0bctsdadceiBUgpU1g==}
     hasBin: true
 
   joycon@2.2.5:
@@ -7079,7 +7079,7 @@ snapshots:
       merge-stream: 2.0.0
       supports-color: 7.2.0
 
-  jiti@1.21.6: {}
+  jiti@2.4.1: {}
 
   joycon@2.2.5: {}
 

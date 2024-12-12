@@ -38,7 +38,7 @@
     "eslint": "^8.57.1",
     "fetch-mock": "^9.11.0",
     "installed-check": "^9.3.0",
-    "jiti": "^1.21.6",
+    "jiti": "^2.4.1",
     "node-fetch": "npm:node-fetch-native@^1.6.4",
     "nyc": "latest",
     "sinon": "^17.0.1",
