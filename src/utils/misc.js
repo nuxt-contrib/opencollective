@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/named
 import { consola } from 'consola'
 
 export const reportAndThrowError = (msg) => {

@@ -12,9 +12,9 @@
   "scripts": {
     "build": "bili -t node --format cjs src/index.js",
     "lint": "eslint src test",
-    "prepublish": "yarn build",
+    "prepublish": "pnpm build",
     "release": "standard-version && git push --follow-tags && npm publish",
-    "test": "yarn lint && yarn test:coverage",
+    "test": "pnpm lint && pnpm test:coverage",
     "test:ava": "nyc ava --verbose",
     "test:coverage": "nyc --reporter=lcov --reporter=html ava"
   },
@@ -45,5 +45,6 @@
   "engines": {
     "node": ">=8.17.0",
     "npm": ">=5.10.0"
-  }
+  },
+  "packageManager": "pnpm@9.15.0"
 }

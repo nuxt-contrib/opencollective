@@ -1,5 +1,6 @@
 import path from 'path'
 import { spy } from 'sinon'
+// eslint-disable-next-line import/named
 import { consola } from 'consola'
 
 export const spyOnConsola = (t) => {

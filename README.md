@@ -97,9 +97,9 @@ production or running a CI pipeline. That's why the message is
 ## Development
 
 - Clone this repository
-- Install dependencies using `yarn install` or `npm install`
+- Install dependencies using `pnpm install`
 - Run it manually `path/to/project/root/src/index.js path/to/package/you/want/to/try`
-- Run tests with `npm t` or `yarn test`
+- Run tests with `npm t` or `pnpm test`
 
 ## Inspiration
 

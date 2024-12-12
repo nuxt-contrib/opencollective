@@ -81,8 +81,8 @@ test.serial('it prints nothing when hide is true', async (t) => {
   t.is(log.trim(), '')
 })
 
-test.serial('yarn postinstall script works as expected', async (t) => {
-  const { stdout: rawStdout } = await promisify(exec)('yarn postinstall', { cwd: pkgPath })
+test.serial('pnpm postinstall script works as expected', async (t) => {
+  const { stdout: rawStdout } = await promisify(exec)('pnpm postinstall', { cwd: pkgPath })
   const stdout = rawStdout.toString('utf8')
 
   const content = [
