@@ -12,6 +12,7 @@
   "scripts": {
     "build": "bili -t node --format cjs src/index.js",
     "lint": "eslint src test",
+    "lint:engines": "installed-check -d",
     "prepublish": "pnpm build",
     "release": "standard-version && git push --follow-tags && npm publish",
     "test": "pnpm lint && pnpm test:coverage",
@@ -35,15 +36,16 @@
     "ava": "^5.3.1",
     "bili": "latest",
     "eslint": "^8.57.1",
-    "node-fetch": "npm:node-fetch-native@^1.6.4",
     "fetch-mock": "^9.11.0",
+    "installed-check": "^9.3.0",
     "jiti": "^1.21.6",
+    "node-fetch": "npm:node-fetch-native@^1.6.4",
     "nyc": "latest",
     "sinon": "^17.0.1",
     "standard-version": "^9.5.0"
   },
   "engines": {
-    "node": ">=8.17.0",
+    "node": "^14.18.0 || >=16.10.0",
     "npm": ">=5.10.0"
   },
   "packageManager": "pnpm@9.15.0"
