@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       consola:
-        specifier: ^3.3.3
-        version: 3.3.3
+        specifier: ^3.4.0
+        version: 3.4.0
     devDependencies:
       '@commitlint/cli':
         specifier: ^17.8.1
@@ -1325,8 +1325,8 @@ packages:
     resolution: {integrity: sha512-OAcsnTEYu1ARJqWVGwf4zh4JDfHZEaSNlNccFmt8YjB2l/n19/PF2viLINHc57vO4FKIAFl2FWASIGZZWZ2Kxw==}
     engines: {node: '>=10.18.0 <11 || >=12.14.0 <13 || >=14'}
 
-  consola@3.3.3:
-    resolution: {integrity: sha512-Qil5KwghMzlqd51UXM0b6fyaGHtOC22scxrwrz4A2882LyUMwQjnvaedN1HAeXzphspQ6CpHkzMAWxBTUruDLg==}
+  consola@3.4.0:
+    resolution: {integrity: sha512-EiPU8G6dQG0GFHNR8ljnZFki/8a+cQwEQ+7wpxdChl02Q8HXlwEZWD5lqAF8vC2sEC3Tehr8hy7vErz88LHyUA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
   conventional-changelog-angular@5.0.13:
@@ -5735,7 +5735,7 @@ snapshots:
       semver: 7.6.3
       well-known-symbols: 2.0.0
 
-  consola@3.3.3: {}
+  consola@3.4.0: {}
 
   conventional-changelog-angular@5.0.13:
     dependencies:
