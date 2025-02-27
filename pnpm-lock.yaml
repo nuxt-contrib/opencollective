@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       consola:
-        specifier: ^3.3.3
-        version: 3.3.3
+        specifier: ^3.4.0
+        version: 3.4.0
     devDependencies:
       '@commitlint/cli':
         specifier: ^17.8.1
@@ -32,7 +32,7 @@ importers:
         version: 8.57.1
       fetch-mock:
         specifier: ^9.11.0
-        version: 9.11.0(node-fetch-native@1.6.4)
+        version: 9.11.0(node-fetch-native@1.6.6)
       installed-check:
         specifier: ^9.3.0
         version: 9.3.0
@@ -40,8 +40,8 @@ importers:
         specifier: ^1.21.7
         version: 1.21.7
       node-fetch:
-        specifier: npm:node-fetch-native@^1.6.4
-        version: node-fetch-native@1.6.4
+        specifier: npm:node-fetch-native@^1.6.6
+        version: node-fetch-native@1.6.6
       nyc:
         specifier: latest
         version: 17.1.0
@@ -1325,8 +1325,8 @@ packages:
     resolution: {integrity: sha512-OAcsnTEYu1ARJqWVGwf4zh4JDfHZEaSNlNccFmt8YjB2l/n19/PF2viLINHc57vO4FKIAFl2FWASIGZZWZ2Kxw==}
     engines: {node: '>=10.18.0 <11 || >=12.14.0 <13 || >=14'}
 
-  consola@3.3.3:
-    resolution: {integrity: sha512-Qil5KwghMzlqd51UXM0b6fyaGHtOC22scxrwrz4A2882LyUMwQjnvaedN1HAeXzphspQ6CpHkzMAWxBTUruDLg==}
+  consola@3.4.0:
+    resolution: {integrity: sha512-EiPU8G6dQG0GFHNR8ljnZFki/8a+cQwEQ+7wpxdChl02Q8HXlwEZWD5lqAF8vC2sEC3Tehr8hy7vErz88LHyUA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
   conventional-changelog-angular@5.0.13:
@@ -2644,9 +2644,11 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    deprecated: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
 
   lodash.isfunction@3.0.9:
     resolution: {integrity: sha512-AirXNj15uRIMMPihnkInB4i3NHeb4iBtNg9WRWuK2o31S+ePwwNmDPaTL3o7dTJ+VXNZim7rFs4rxN4YU1oUJw==}
@@ -2824,8 +2826,8 @@ packages:
   nise@5.1.9:
     resolution: {integrity: sha512-qOnoujW4SV6e40dYxJOb3uvuoPHtmLzIk4TFo+j0jPJoC+5Z9xja5qH5JZobEPsa8+YYphMrOSwnrshEhG2qww==}
 
-  node-fetch-native@1.6.4:
-    resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
+  node-fetch-native@1.6.6:
+    resolution: {integrity: sha512-8Mc2HhqPdlIfedsuZoc3yioPuzp6b+L5jRCRY1QzuWZh2EGJVQrGppC6V6cF0bLdbW0+O2YpqCA25aF/1lvipQ==}
 
   node-preload@0.2.1:
     resolution: {integrity: sha512-RM5oyBy45cLEoHqCeh+MNuFAxO0vTFBLskvQbOKnEE7YTTSN4tbN8QWDIPQ6L+WvKsB/qLEGpYe2ZZ9d4W9OIQ==}
@@ -5735,7 +5737,7 @@ snapshots:
       semver: 7.6.3
       well-known-symbols: 2.0.0
 
-  consola@3.3.3: {}
+  consola@3.4.0: {}
 
   conventional-changelog-angular@5.0.13:
     dependencies:
@@ -6478,7 +6480,7 @@ snapshots:
     dependencies:
       reusify: 1.0.4
 
-  fetch-mock@9.11.0(node-fetch-native@1.6.4):
+  fetch-mock@9.11.0(node-fetch-native@1.6.6):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/runtime': 7.26.0
@@ -6491,7 +6493,7 @@ snapshots:
       querystring: 0.2.1
       whatwg-url: 6.5.0
     optionalDependencies:
-      node-fetch: node-fetch-native@1.6.4
+      node-fetch: node-fetch-native@1.6.6
     transitivePeerDependencies:
       - supports-color
 
@@ -7353,7 +7355,7 @@ snapshots:
       just-extend: 6.2.0
       path-to-regexp: 6.3.0
 
-  node-fetch-native@1.6.4: {}
+  node-fetch-native@1.6.6: {}
 
   node-preload@0.2.1:
     dependencies:
