@@ -39,7 +39,7 @@
     "jiti": "^1.21.7",
     "node-fetch": "npm:node-fetch-native@^1.6.4",
     "nyc": "latest",
-    "sinon": "^17.0.1",
+    "sinon": "^19.0.4",
     "standard-version": "^9.5.0"
   },
   "engines": {
