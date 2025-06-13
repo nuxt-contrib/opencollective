@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       consola:
-        specifier: ^3.3.3
-        version: 3.3.3
+        specifier: ^3.4.2
+        version: 3.4.2
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.8.1
@@ -32,7 +32,7 @@ importers:
         version: 8.57.1
       fetch-mock:
         specifier: ^9.11.0
-        version: 9.11.0(node-fetch-native@1.6.4)
+        version: 9.11.0(node-fetch-native@1.6.6)
       installed-check:
         specifier: ^9.3.0
         version: 9.3.0
@@ -40,8 +40,8 @@ importers:
         specifier: ^1.21.7
         version: 1.21.7
       node-fetch:
-        specifier: npm:node-fetch-native@^1.6.4
-        version: node-fetch-native@1.6.4
+        specifier: npm:node-fetch-native@^1.6.6
+        version: node-fetch-native@1.6.6
       nyc:
         specifier: latest
         version: 17.1.0
@@ -1300,8 +1300,8 @@ packages:
     resolution: {integrity: sha512-OAcsnTEYu1ARJqWVGwf4zh4JDfHZEaSNlNccFmt8YjB2l/n19/PF2viLINHc57vO4FKIAFl2FWASIGZZWZ2Kxw==}
     engines: {node: '>=10.18.0 <11 || >=12.14.0 <13 || >=14'}
 
-  consola@3.3.3:
-    resolution: {integrity: sha512-Qil5KwghMzlqd51UXM0b6fyaGHtOC22scxrwrz4A2882LyUMwQjnvaedN1HAeXzphspQ6CpHkzMAWxBTUruDLg==}
+  consola@3.4.2:
+    resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
   conventional-changelog-angular@5.0.13:
@@ -2794,8 +2794,8 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
-  node-fetch-native@1.6.4:
-    resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
+  node-fetch-native@1.6.6:
+    resolution: {integrity: sha512-8Mc2HhqPdlIfedsuZoc3yioPuzp6b+L5jRCRY1QzuWZh2EGJVQrGppC6V6cF0bLdbW0+O2YpqCA25aF/1lvipQ==}
 
   node-preload@0.2.1:
     resolution: {integrity: sha512-RM5oyBy45cLEoHqCeh+MNuFAxO0vTFBLskvQbOKnEE7YTTSN4tbN8QWDIPQ6L+WvKsB/qLEGpYe2ZZ9d4W9OIQ==}
@@ -5645,7 +5645,7 @@ snapshots:
       semver: 7.6.3
       well-known-symbols: 2.0.0
 
-  consola@3.3.3: {}
+  consola@3.4.2: {}
 
   conventional-changelog-angular@5.0.13:
     dependencies:
@@ -6376,7 +6376,7 @@ snapshots:
     dependencies:
       reusify: 1.0.4
 
-  fetch-mock@9.11.0(node-fetch-native@1.6.4):
+  fetch-mock@9.11.0(node-fetch-native@1.6.6):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/runtime': 7.26.0
@@ -6389,7 +6389,7 @@ snapshots:
       querystring: 0.2.1
       whatwg-url: 6.5.0
     optionalDependencies:
-      node-fetch: node-fetch-native@1.6.4
+      node-fetch: node-fetch-native@1.6.6
     transitivePeerDependencies:
       - supports-color
 
@@ -7243,7 +7243,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  node-fetch-native@1.6.4: {}
+  node-fetch-native@1.6.6: {}
 
   node-preload@0.2.1:
     dependencies:
