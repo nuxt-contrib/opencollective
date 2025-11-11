@@ -34,7 +34,7 @@
     "ava": "^5.3.1",
     "bili": "latest",
     "eslint": "^8.57.1",
-    "fetch-mock": "^9.11.0",
+    "fetch-mock": "^12.6.0",
     "installed-check": "^9.3.0",
     "jiti": "^1.21.7",
     "node-fetch": "npm:node-fetch-native@^1.6.4",
