@@ -25,11 +25,11 @@
     ]
   },
   "dependencies": {
-    "consola": "^3.3.3"
+    "consola": "^3.4.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.0.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
     "@nuxtjs/eslint-config": "^12.0.0",
     "ava": "^5.3.1",
     "bili": "latest",
@@ -37,14 +37,14 @@
     "fetch-mock": "^9.11.0",
     "installed-check": "^9.3.0",
     "jiti": "^1.21.7",
-    "node-fetch": "npm:node-fetch-native@^1.6.4",
+    "node-fetch": "npm:node-fetch-native@^1.6.7",
     "nyc": "latest",
-    "sinon": "^21.0.0",
+    "sinon": "^21.0.1",
     "standard-version": "^9.5.0"
   },
   "engines": {
     "node": "^14.18.0 || >=16.10.0",
-    "npm": ">=11.2.0"
+    "npm": ">=11.7.0"
   },
-  "packageManager": "pnpm@10.21.0"
+  "packageManager": "pnpm@10.28.0"
 }
