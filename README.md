@@ -111,11 +111,11 @@ This project is heavily inspired by [opencollective-cli](https://github.com/open
 MIT. Made with 💖
 
 <!-- Refs -->
-[npm-v-src]: https://img.shields.io/npm/v/@nuxtjs/opencollective?style=flat-square
-[npm-v-href]: https://npmjs.com/package/@nuxtjs/opencollective
+[npm-v-src]: https://npmx.dev/api/registry/badge/version/@nuxtjs/opencollective
+[npm-v-href]: https://npmx.dev/package/@nuxtjs/opencollective
 
-[npm-d-src]: https://img.shields.io/npm/dm/@nuxtjs/opencollective?style=flat-square
-[npm-d-href]: https://npmjs.com/package/@nuxtjs/opencollective
+[npm-d-src]: https://npmx.dev/api/registry/badge/downloads/@nuxtjs/opencollective
+[npm-d-href]: https://npmx.dev/package/@nuxtjs/opencollective
 
 [github-actions-src]: https://img.shields.io/github/workflow/status/nuxt-contrib/opencollective/ci/main?style=flat-square
 [github-actions-href]: https://github.com/nuxt-contrib/opencollective/actions?query=workflow%3Aci
