@@ -40,7 +40,7 @@
     "node-fetch": "npm:node-fetch-native@^1.6.4",
     "nyc": "latest",
     "sinon": "^21.0.0",
-    "standard-version": "^9.5.0"
+    "commit-and-tag-version": "^9.5.0"
   },
   "engines": {
     "node": "^14.18.0 || >=16.10.0",
