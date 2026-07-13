@@ -1,5 +1,11 @@
 {
   "extends": [
     "@nuxtjs"
-  ]
+  ],
+  "settings": {
+    "import/ignore": [
+      "consola",
+      "sinon"
+    ]
+  }
 }
