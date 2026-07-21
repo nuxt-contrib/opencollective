@@ -39,7 +39,7 @@
     "jiti": "^1.21.7",
     "node-fetch": "npm:node-fetch-native@^1.6.7",
     "nyc": "latest",
-    "sinon": "^22.0.0",
+    "sinon": "^22.1.0",
     "commit-and-tag-version": "^12.7.3"
   },
   "engines": {
