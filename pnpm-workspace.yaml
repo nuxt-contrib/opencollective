@@ -3,3 +3,8 @@ packages:
 
 allowBuilds:
   core-js: false
+  unrs-resolver: false
+
+minimumReleaseAgeExclude:
+  - '@nuxt/eslint-config@1.17.0'
+  - '@nuxt/eslint-plugin@1.17.0'

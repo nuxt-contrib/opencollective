@@ -1,12 +1,12 @@
-/* eslint-disable no-console */
+ 
 /* eslint-disable no-control-regex */
-import { execSync } from 'child_process'
+import { execSync } from 'node:child_process'
 import { colors } from 'consola/utils'
 import { formatMoney, isWin32 } from './misc'
 
 export const print = (color = null) => (str = '') => {
   const terminalCols = retrieveCols()
-  const strLength = str.replace(/\u001B\[[0-9]{2}m/g, '').length
+  const strLength = str.replace(/\u001B\[\d{2}m/g, '').length
   const leftPaddingLength = Math.floor((terminalCols - strLength) / 2)
   const leftPadding = ' '.repeat(Math.max(leftPaddingLength, 0))
   if (color) {
@@ -27,7 +27,7 @@ export const retrieveCols = (() => {
     try {
       const terminalCols = execSync('tput cols', { stdio: ['pipe', 'pipe', 'ignore'] })
       result = parseInt(terminalCols.toString()) || defaultCols
-    } catch (e) {
+    } catch {
       result = defaultCols
     }
     return result

@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import test from 'ava'
 import { fetchPkg } from '../../../src/utils/fetch'
 import { pkgPath, spyOnConsola } from '../../_helpers'
@@ -8,7 +8,7 @@ test.beforeEach(spyOnConsola)
 test.serial('it can fetch pkg', async (t) => {
   try {
     await fetchPkg(pkgPath)
-  } catch (e) {
+  } catch {
     t.fail()
   }
   t.false(t.context.consola.called)

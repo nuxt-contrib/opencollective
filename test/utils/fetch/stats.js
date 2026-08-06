@@ -5,7 +5,7 @@ import { spyOnConsola } from '../../_helpers'
 
 test.beforeEach(spyOnConsola)
 
-test.afterEach((t) => {
+test.afterEach(() => {
   fetchMock.restore()
 })
 
@@ -23,7 +23,7 @@ test.serial('it can fetch stats', async (t) => {
   try {
     const stats = await fetchStats('https://opencollective.com/fakecollective')
     t.deepEqual(stats, responseObject)
-  } catch (e) {
+  } catch {
     t.fail()
   }
   fetchMock.restore()
@@ -37,7 +37,7 @@ test.serial('it throws error when receiving invalid json while fetching stats', 
     t.is(stats, undefined)
     t.is(t.context.consola.firstCall.lastArg.message, 'SyntaxError: Unexpected token \'o\', "oh no! It\'s no JSON" is not valid JSON')
     t.is(t.context.consola.secondCall.lastArg.message, 'Could not load the stats for fakecollective')
-  } catch (e) {
+  } catch {
     t.fail()
   }
 })
@@ -49,7 +49,7 @@ test.serial('it throws error when cannot connect to url while fetching stats', a
     t.is(stats, undefined)
     t.is(t.context.consola.firstCall.lastArg.message, 'error')
     t.is(t.context.consola.secondCall.lastArg.message, 'Could not fetch https://opencollective.com/fakecollective.json')
-  } catch (e) {
+  } catch {
     t.fail()
   }
 })

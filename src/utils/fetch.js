@@ -1,5 +1,5 @@
-import path from 'path'
-import fs from 'fs'
+import path from 'node:path'
+import fs from 'node:fs'
 import { collectiveSlugFromUrl } from './transforms'
 import { report, reportAndThrowError } from './misc'
 
@@ -38,7 +38,7 @@ export const fetchLogo = async (logoUrl) => {
       return res.text()
     }
     report(`Error while fetching logo from ${logoUrl}. The response wasn't well-formatted`)
-  } catch (e) {
+  } catch {
     report(`Error while fetching logo from ${logoUrl}`)
   }
 }
@@ -49,7 +49,7 @@ export const fetchPkg = (pathToPkg) => {
   const fullPathToPkg = path.resolve(`${pathToPkg}/package.json`)
   try {
     return JSON.parse(fs.readFileSync(fullPathToPkg, 'utf8'))
-  } catch (e) {
+  } catch {
     reportAndThrowError(`Could not find package.json at ${fullPathToPkg}`)
   }
 }

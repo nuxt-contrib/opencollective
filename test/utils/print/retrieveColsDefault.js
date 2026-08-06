@@ -1,4 +1,4 @@
-import childProcess from 'child_process'
+import childProcess from 'node:child_process'
 import test from 'ava'
 import { stub } from 'sinon'
 import { retrieveCols } from '../../../src/utils/print'

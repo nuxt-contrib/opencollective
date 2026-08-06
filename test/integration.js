@@ -1,5 +1,5 @@
-import { exec } from 'child_process'
-import { promisify } from 'util'
+import { exec } from 'node:child_process'
+import { promisify } from 'node:util'
 import fetchMock from 'fetch-mock'
 import test from 'ava'
 import { init } from '../src/init'
@@ -19,7 +19,7 @@ const stats = {
   contributorsCount: 129
 }
 
-test.before((t) => {
+test.before(() => {
   fetchMock.mock('https://opencollective.com/fake.json', stats)
   fetchMock.mock('https://opencollective.com/fake/logo.txt?reverse=true&variant=variant2', {
     body: logo,
@@ -27,7 +27,7 @@ test.before((t) => {
   })
 })
 
-test.beforeEach((t) => {
+test.beforeEach(() => {
   fetchMock.resetHistory()
 })
 
@@ -41,7 +41,7 @@ test.serial('it prints everything', async (t) => {
   const printedSpaces = ' '.repeat(cols / 2)
 
   let log = ''
-  process.stdout.write = (write => function (string, encoding, fileDescriptor) {
+  process.stdout.write = (write => function (string) {
     log += string
     write.apply(process.stdout, arguments)
   })(process.stdout.write)
@@ -67,7 +67,7 @@ test.serial('it prints everything', async (t) => {
 
 test.serial('it prints nothing when hide is true', async (t) => {
   let log = ''
-  process.stdout.write = (write => function (string, encoding, fileDescriptor) {
+  process.stdout.write = (write => function (string) {
     log += string
     write.apply(process.stdout, arguments)
   })(process.stdout.write)

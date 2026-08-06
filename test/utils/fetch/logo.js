@@ -5,7 +5,7 @@ import { spyOnConsola } from '../../_helpers'
 
 test.beforeEach(spyOnConsola)
 
-test.afterEach((t) => {
+test.afterEach(() => {
   fetchMock.restore()
 })
 
@@ -13,7 +13,7 @@ test.serial('it will silently return when no logoUrl is specified', async (t) =>
   try {
     const emptyLogoResult = await fetchLogo('')
     t.is(emptyLogoResult, undefined)
-  } catch (e) {
+  } catch {
     t.fail()
   }
   t.false(t.context.consola.called)
