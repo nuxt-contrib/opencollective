@@ -36,7 +36,7 @@
     "commit-and-tag-version": "^13.1.0",
     "eslint": "^10.8.0",
     "fetch-mock": "^9.11.0",
-    "installed-check": "^10.0.1",
+    "installed-check": "^11.0.0",
     "jiti": "^1.21.7",
     "node-fetch": "npm:node-fetch-native@^1.6.7",
     "nyc": "^18.0.0",
