@@ -31,7 +31,7 @@
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
     "@nuxt/eslint-config": "^1.17.0",
-    "ava": "^5.3.1",
+    "ava": "^8.0.1",
     "bili": "^5.0.5",
     "commit-and-tag-version": "^13.1.0",
     "eslint": "^10.8.0",
