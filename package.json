@@ -28,8 +28,8 @@
     "consola": "^3.4.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.1",
-    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
     "@nuxt/eslint-config": "^1.17.0",
     "ava": "^5.3.1",
     "bili": "^5.0.5",
@@ -46,5 +46,5 @@
     "node": "^14.18.0 || >=16.10.0",
     "npm": ">=11.19.0"
   },
-  "packageManager": "pnpm@11.21.0"
+  "packageManager": "pnpm@11.22.0"
 }
