@@ -34,7 +34,7 @@
     "ava": "^5.3.1",
     "bili": "^5.0.5",
     "commit-and-tag-version": "^13.1.2",
-    "eslint": "^10.8.1",
+    "eslint": "^10.9.0",
     "fetch-mock": "^9.11.0",
     "installed-check": "^11.0.0",
     "jiti": "^1.21.7",
@@ -46,5 +46,5 @@
     "node": "^14.18.0 || >=16.10.0",
     "npm": ">=11.19.0"
   },
-  "packageManager": "pnpm@11.22.0"
+  "packageManager": "pnpm@11.23.0"
 }
