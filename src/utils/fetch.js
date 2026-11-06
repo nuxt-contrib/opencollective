@@ -5,7 +5,20 @@ import { report, reportAndThrowError } from './misc'
 
 const FETCH_TIMEOUT = 3000
 
+const isTrustedOpencollectiveUrl = (url) => {
+  try {
+    const { protocol, hostname } = new URL(url)
+    return protocol === 'https:' && (hostname === 'opencollective.com' || hostname.endsWith('.opencollective.com'))
+  } catch {
+    return false
+  }
+}
+
 const fetchJson = async (url) => {
+  if (!isTrustedOpencollectiveUrl(url)) {
+    reportAndThrowError(`Refusing to fetch untrusted URL ${url}.json`)
+  }
+
   try {
     return (await global.fetch(`${url}.json`, { timeout: FETCH_TIMEOUT })).json()
   } catch (e) {
