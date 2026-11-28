@@ -28,13 +28,13 @@
     "consola": "^3.4.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.4",
-    "@commitlint/config-conventional": "^21.2.4",
+    "@commitlint/cli": "^21.3.0",
+    "@commitlint/config-conventional": "^21.3.0",
     "@nuxt/eslint-config": "^1.17.0",
     "ava": "^5.3.1",
     "bili": "^5.0.5",
-    "commit-and-tag-version": "^13.3.0",
-    "eslint": "^10.15.0",
+    "commit-and-tag-version": "^13.5.0",
+    "eslint": "^10.16.0",
     "fetch-mock": "^9.11.0",
     "installed-check": "^11.0.0",
     "jiti": "^1.21.7",
@@ -44,7 +44,7 @@
   },
   "engines": {
     "node": "^14.18.0 || >=16.10.0",
-    "npm": ">=11.21.2"
+    "npm": ">=11.21.3"
   },
-  "packageManager": "pnpm@12.21.0"
+  "packageManager": "pnpm@12.23.0"
 }
